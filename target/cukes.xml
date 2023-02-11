@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="114.61" tests="10" skipped="0" failures="5" errors="0">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="30.808">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;result&quot;]&quot;}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9dfa30a5a7a0ac346a595c99b52695d3, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9dfa30a5a7a0ac346a595c99b52695d3">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="result"]"}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9dfa30a5a7a0ac346a595c99b52695d3, findElement {using=xpath, value=//div[@class="result"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9dfa30a5a7a0ac346a595c99b52695d3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.Pages.P01_Register.successMessage(P01_Register.java:48)
+	at org.example.StepDefinitions.D01_registerStepDef.success_Message(D01_registerStepDef.java:45)
+	at ✽.Success message is displayed(file:///C:/Users/SMART/IdeaProjects/FWD_E-commerce_App_Automation_Testing/src/main/resources/features/F01_Register.feature:8)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User go to register page..............................................passed
+And User select gender type.................................................passed
+When User enter valid data..................................................passed
+Then User click on register button..........................................passed
+Then Success message is displayed...........................................failed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="User could login with valid email and password" time="9.867">
+<system-out><![CDATA[
+Given User go to login page.................................................passed
+When User login with valid email and password...............................passed
+Then User click on login button.............................................passed
+Then User login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="User could not login with invalid email and password" time="8.971">
+<system-out><![CDATA[
+Given User go to login page.................................................passed
+When User login with invalid email or password..............................passed
+Then User click on login button.............................................passed
+Then User could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | User could change currencies to euro" name="User could change currencies to euro" time="7.786">
+<system-out><![CDATA[
+When User select euro from dropdown list....................................passed
+Then Currencies change successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product name - Example #1.1" time="9.067">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.StepDefinitions.D04_SearchStepDef.results_With_Name(D04_SearchStepDef.java:32)
+	at ✽.Results appear with products related to the product name "book"(file:///C:/Users/SMART/IdeaProjects/FWD_E-commerce_App_Automation_Testing/src/main/resources/features/F04_Search.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+When User search by product name "book" in search field.....................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product name "book"........failed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product name - Example #1.2" time="8.552">
+<system-out><![CDATA[
+When User search by product name "laptop" in search field...................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product name "laptop"......passed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product name - Example #1.3" time="8.214">
+<system-out><![CDATA[
+When User search by product name "nike" in search field.....................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product name "nike"........passed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product sku - Example #1.1" time="10.388">
+<failure type="org.openqa.selenium.InvalidSelectorException" message="invalid selector: Unable to locate an element with the xpath expression //*[@class&quot;sku&quot;]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class&quot;sku&quot;]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3335e3520ce2a7cf15632d9a11e3a4ce, findElement {using=xpath, value=//*[@class&quot;sku&quot;]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51769}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51769/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3335e3520ce2a7cf15632d9a11e3a4ce">
+<![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[@class"sku"]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class"sku"]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3335e3520ce2a7cf15632d9a11e3a4ce, findElement {using=xpath, value=//*[@class"sku"]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51769}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51769/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3335e3520ce2a7cf15632d9a11e3a4ce
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.Pages.P04_Search.product_Sku(P04_Search.java:20)
+	at org.example.StepDefinitions.D04_SearchStepDef.result_With_Name(D04_SearchStepDef.java:42)
+	at ✽.Results appear with products related to the product sku "SCI_FAITH"(file:///C:/Users/SMART/IdeaProjects/FWD_E-commerce_App_Automation_Testing/src/main/resources/features/F04_Search.feature:16)
+]]>
+</failure>
+<system-out><![CDATA[
+When User search by product sku "SCI_FAITH" in search field.................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product sku "SCI_FAITH"....failed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product sku - Example #1.2" time="10.46">
+<failure type="org.openqa.selenium.InvalidSelectorException" message="invalid selector: Unable to locate an element with the xpath expression //*[@class&quot;sku&quot;]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class&quot;sku&quot;]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4832b224447285649c4f838e7f29942, findElement {using=xpath, value=//*[@class&quot;sku&quot;]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51792}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51792/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4832b224447285649c4f838e7f29942">
+<![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[@class"sku"]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class"sku"]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4832b224447285649c4f838e7f29942, findElement {using=xpath, value=//*[@class"sku"]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51792}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51792/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4832b224447285649c4f838e7f29942
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.Pages.P04_Search.product_Sku(P04_Search.java:20)
+	at org.example.StepDefinitions.D04_SearchStepDef.result_With_Name(D04_SearchStepDef.java:42)
+	at ✽.Results appear with products related to the product sku "APPLE_CAM"(file:///C:/Users/SMART/IdeaProjects/FWD_E-commerce_App_Automation_Testing/src/main/resources/features/F04_Search.feature:16)
+]]>
+</failure>
+<system-out><![CDATA[
+When User search by product sku "APPLE_CAM" in search field.................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product sku "APPLE_CAM"....failed
+]]></system-out>
+</testcase>
+<testcase classname="F04 | User can search about product" name="User search by product sku - Example #1.3" time="9.712">
+<failure type="org.openqa.selenium.InvalidSelectorException" message="invalid selector: Unable to locate an element with the xpath expression //*[@class&quot;sku&quot;]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class&quot;sku&quot;]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [034009613cee018808d615bf4b2aca0b, findElement {using=xpath, value=//*[@class&quot;sku&quot;]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51815}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51815/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 034009613cee018808d615bf4b2aca0b">
+<![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[@class"sku"]/span[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class"sku"]/span[2]' is not a valid XPath expression.
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [034009613cee018808d615bf4b2aca0b, findElement {using=xpath, value=//*[@class"sku"]/span[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51815}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51815/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 034009613cee018808d615bf4b2aca0b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.Pages.P04_Search.product_Sku(P04_Search.java:20)
+	at org.example.StepDefinitions.D04_SearchStepDef.result_With_Name(D04_SearchStepDef.java:42)
+	at ✽.Results appear with products related to the product sku "SF_PRO_11"(file:///C:/Users/SMART/IdeaProjects/FWD_E-commerce_App_Automation_Testing/src/main/resources/features/F04_Search.feature:16)
+]]>
+</failure>
+<system-out><![CDATA[
+When User search by product sku "SF_PRO_11" in search field.................passed
+And User click on search button.............................................passed
+Then Results appear with products related to the product sku "SF_PRO_11"....failed
+]]></system-out>
+</testcase>
+</testsuite>
