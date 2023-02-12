@@ -3,7 +3,7 @@ package org.example.StepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.Pages.P04_Search;
+import org.example.Pages.P03_homePage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class D04_SearchStepDef {
 
-    P04_Search search=new P04_Search();
+    P03_homePage search=new P03_homePage();
     @When("User search by product name {string} in search field")
     public void search_By_Name(String name){
         search.search_Field().sendKeys(name);
