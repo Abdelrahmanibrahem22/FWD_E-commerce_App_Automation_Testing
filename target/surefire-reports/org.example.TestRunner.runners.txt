@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.example.TestRunner.runners
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 247.79 s <<< FAILURE! - in org.example.TestRunner.runners
+org.example.TestRunner.runners.runScenario  Time elapsed: 20.642 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class="ico-account"]"}
+  (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-RUFP0BD', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e7ef30fdc10df7b71f5bbe0053102923, findElement {using=xpath, value=//a[@class="ico-account"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.25 (771113d280dd..., userDataDir: C:\Users\SMART\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63015/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7ef30fdc10df7b71f5bbe0053102923
+
+org.example.TestRunner.runners.runScenario  Time elapsed: 9.172 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+
+org.example.TestRunner.runners.runScenario  Time elapsed: 7.403 s  <<< FAILURE!
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+
+org.example.TestRunner.runners.runScenario  Time elapsed: 10.985 s  <<< FAILURE!
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+
+org.example.TestRunner.runners.runScenario  Time elapsed: 15.634 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+

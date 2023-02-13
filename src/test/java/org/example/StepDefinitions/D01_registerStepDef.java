@@ -31,7 +31,7 @@ public class D01_registerStepDef {
         Select year=new Select(register.birthYear());
         year.selectByVisibleText("2000");
         register.companyName().sendKeys("FWD");
-        register.email().sendKeys("test@example.com");
+        register.email().sendKeys("abdo_test@example.com");
         register.password().sendKeys("P@ssw0rd");
         register.confirmPassword().sendKeys("P@ssw0rd");
     }

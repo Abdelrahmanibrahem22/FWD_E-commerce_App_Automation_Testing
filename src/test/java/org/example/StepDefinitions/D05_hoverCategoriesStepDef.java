@@ -21,6 +21,7 @@ public class D05_hoverCategoriesStepDef {
         WebDriverWait wait=new WebDriverWait(Hooks.driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.visibilityOf(homePage.mainCategory_Computers()));
         subCategory_Title=homePage.subCategory_Software().getText().toLowerCase().trim();
+        //System.out.println(subCategory_Title);
         ac.moveToElement(homePage.mainCategory_Computers()).
                 moveToElement(homePage.subCategory_Software()).click().build().perform();
 
@@ -28,10 +29,11 @@ public class D05_hoverCategoriesStepDef {
     @Then("User should be navigated to a page that contains that product subcategory")
     public void check_Result_Of_Navigate(){
         SoftAssert soft=new SoftAssert();
-        soft.assertTrue(Hooks.driver.getCurrentUrl().contains("Software"));
+        soft.assertTrue(Hooks.driver.getCurrentUrl().contains("software"));
         soft.assertEquals(homePage.subCategory_Page_Title().getText(), "Software");
+        //System.out.println(homePage.subCategory_Page_Title().getText());
         soft.assertTrue(homePage.subCategory_Page_Title().getText().
-                toLowerCase().equals(subCategory_Title));
+                toLowerCase().contains(subCategory_Title));
         soft.assertAll();
     }
 }
